@@ -61,5 +61,8 @@ public class CircleView: UIView {
 
 	private func setup() {
 		backgroundColor = .clear
+		NSLayoutConstraint.activate([
+			widthAnchor.constraint(equalTo: heightAnchor)
+		])
 	}
 }
