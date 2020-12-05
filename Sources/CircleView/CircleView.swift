@@ -5,11 +5,13 @@
 
 import UIKit
 
+@IBDesignable
 public class CircleView: UIView {
-	public var lineWidth: CGFloat = 0
-	public var lineColor: UIColor = .label
-	public var fillColor: UIColor = .black
-	public var shouldFill = false
+	
+	@IBInspectable public var lineWidth: CGFloat = 0
+	@IBInspectable public var lineColor: UIColor = .label
+	@IBInspectable public var fillColor: UIColor = .black
+	@IBInspectable public var shouldFill = false
 	public var circle: Circle = .zero {
 		didSet {
 			self.frame = CGRect(x: circle.x, y: circle.y, width: circle.diameter, height: circle.diameter)
