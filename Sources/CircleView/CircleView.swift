@@ -21,6 +21,11 @@ public class CircleView: UIView {
 	///	The circle will be contained inside a square view with a width and height equal to the circle's diameter.
 	/// The frame of the view should not be manipulated directly. Instead the changes should be performed on the view's
 	/// circle-property.
+	///
+	/// Note: When working with constraints you can set _either_ width or height. Please note that setting
+	/// different constraints for height and width will not be respected the CircleView is not designed to be an oval.
+	/// For legibility you can use the CircleView's `diameterAnchor` (spoiler: It's actually just the `widthAnchor`).
+	///
 	/// - Parameter circle: The definition of the view's circle.
 	/// - Parameter lineWidth: The line width of the outer path of the circle.
 	/// - Parameter lineColor: The color used for the outer path of the circle. The default value is `UIColor.label`.
@@ -61,8 +66,21 @@ public class CircleView: UIView {
 
 	private func setup() {
 		backgroundColor = .clear
-		NSLayoutConstraint.activate([
-			widthAnchor.constraint(equalTo: heightAnchor)
-		])
+		let squareConstraint: NSLayoutConstraint = widthAnchor.constraint(equalTo: heightAnchor)
+		squareConstraint.priority = .required
+		squareConstraint.isActive = true
 	}
 }
+
+
+extension CircleView {
+	/// A layout anchor representing the diameter of the view’s circle.
+	///
+	/// This is actually just the `widthAnchor` but added for readability in the constraint-code. Use this
+	/// anchor to create constraints with the view’s diameter. You can combine this anchor only with other
+	/// NSLayoutDimension anchors. For more information, see NSLayoutAnchor.
+	public var diameterAnchor: NSLayoutDimension {
+		widthAnchor
+	}
+}
+
