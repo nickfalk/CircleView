@@ -3,6 +3,9 @@
 A view with a circle for tvOS and iOS. No thrills, no frills, just what it says on the package. Supports different color for the stroke surrounding 
 the circle, and the filled portion of the circle. The linewidth of the stroke is also an easily accessible property.
 
+Not tested in any production code so it might not be ready for prime-time (version-number should be a clue). Is still usable, but proceed
+with caution.
+
 License: MIT
 
 MIT License
