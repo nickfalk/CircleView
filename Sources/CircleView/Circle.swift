@@ -1,3 +1,8 @@
+//
+// Copyright (c) 2020 Truls Benjamin Larsen
+// MIT License, see README.md
+//
+
 import CoreGraphics
 
 /// A structure that contains the location and diameter of a circle.

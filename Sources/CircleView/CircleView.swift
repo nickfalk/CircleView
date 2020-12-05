@@ -1,3 +1,8 @@
+//
+// Copyright (c) 2020 Truls Benjamin Larsen
+// MIT License, see README.md
+//
+
 import UIKit
 
 class CircleView: UIView {
@@ -9,7 +14,6 @@ class CircleView: UIView {
 		didSet {
 			self.frame = CGRect(x: circle.x, y: circle.y, width: circle.diameter, height: circle.diameter)
 		}
-		
 	}
 
 	/// A view containing a circle
@@ -25,7 +29,7 @@ class CircleView: UIView {
 	
 	init(circle: Circle, lineWidth: CGFloat = 1, strokeColor: UIColor = .label, fillColor: UIColor = .label, filled: Bool = true) {
 		let frame = CGRect(x: circle.x, y: circle.y, width: circle.diameter, height: circle.diameter)
-		self.init(frame: frame)
+		super.init(frame: frame)
 		setup()
 
 		self.lineWidth = lineWidth
