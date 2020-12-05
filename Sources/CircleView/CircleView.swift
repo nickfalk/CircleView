@@ -27,7 +27,7 @@ public class CircleView: UIView {
 	/// - Parameter fillColor: The color used to fill the circle. The default value is `UIColor.label`.
 	/// - Parameter filled: Defines whether the circle should be filled or not. The default value is `true`.
 	
-	init(circle: Circle, lineWidth: CGFloat = 1, strokeColor: UIColor = .label, fillColor: UIColor = .label, filled: Bool = true) {
+	public init(circle: Circle, lineWidth: CGFloat = 1, strokeColor: UIColor = .label, fillColor: UIColor = .label, filled: Bool = true) {
 		let frame = CGRect(x: circle.x, y: circle.y, width: circle.diameter, height: circle.diameter)
 		super.init(frame: frame)
 		setup()

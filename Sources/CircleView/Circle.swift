@@ -22,7 +22,7 @@ public struct Circle {
 		}
 	}
 	
-	init(x: CGFloat = 0, y: CGFloat = 0, diameter: CGFloat) {
+	public init(x: CGFloat = 0, y: CGFloat = 0, diameter: CGFloat) {
 		self.x = x
 		self.y = y
 		self.diameter = diameter
