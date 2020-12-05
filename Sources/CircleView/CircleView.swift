@@ -48,7 +48,7 @@ public class CircleView: UIView {
 		setup()
 	}
 
-	override func draw(_ rect: CGRect) {
+	public override func draw(_ rect: CGRect) {
 		let inset = lineWidth/2
 		let rect = rect.insetBy(dx: inset, dy: inset)
 		let path = UIBezierPath(ovalIn: rect)
