@@ -6,11 +6,11 @@
 import UIKit
 
 public class CircleView: UIView {
-	var lineWidth: CGFloat = 0
-	var strokeColor: UIColor = .black
-	var fillColor: UIColor = .black
-	var shouldFill = false
-	var circle: Circle = .zero {
+	public var lineWidth: CGFloat = 0
+	public var strokeColor: UIColor = .black
+	public var fillColor: UIColor = .black
+	public var shouldFill = false
+	public var circle: Circle = .zero {
 		didSet {
 			self.frame = CGRect(x: circle.x, y: circle.y, width: circle.diameter, height: circle.diameter)
 		}

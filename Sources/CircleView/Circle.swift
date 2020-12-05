@@ -7,11 +7,11 @@ import CoreGraphics
 
 /// A structure that contains the location and diameter of a circle.
 public struct Circle {
-	var x: CGFloat
-	var y: CGFloat
-	var diameter: CGFloat
+	public var x: CGFloat
+	public var y: CGFloat
+	public var diameter: CGFloat
 
-	var origin: CGPoint {
+	public var origin: CGPoint {
 		set {
 			x = newValue.x
 			y = newValue.y
