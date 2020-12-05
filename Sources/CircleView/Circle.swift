@@ -6,7 +6,7 @@
 import CoreGraphics
 
 /// A structure that contains the location and diameter of a circle.
-struct Circle {
+public struct Circle {
 	var x: CGFloat
 	var y: CGFloat
 	var diameter: CGFloat
@@ -29,6 +29,6 @@ struct Circle {
 	}
 }
 
-extension Circle {
+public extension Circle {
 	static let zero = Circle(diameter: 0)
 }

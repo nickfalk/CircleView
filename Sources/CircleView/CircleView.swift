@@ -5,7 +5,7 @@
 
 import UIKit
 
-class CircleView: UIView {
+public class CircleView: UIView {
 	var lineWidth: CGFloat = 0
 	var strokeColor: UIColor = .black
 	var fillColor: UIColor = .black
