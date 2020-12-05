@@ -1,5 +1,6 @@
 import CoreGraphics
 
+/// A structure that contains the location and diameter of a circle.
 struct Circle {
 	var x: CGFloat
 	var y: CGFloat
@@ -21,6 +22,12 @@ struct Circle {
 		get {
 			CGPoint(x: x, y: y)
 		}
+	}
+	
+	init(x: CGFloat = 0, y: CGFloat = 0, diameter: CGFloat) {
+		self.x = x
+		self.y = y
+		self.diameter = diameter
 	}
 }
 
