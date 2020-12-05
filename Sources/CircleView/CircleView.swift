@@ -7,7 +7,7 @@ import UIKit
 
 public class CircleView: UIView {
 	public var lineWidth: CGFloat = 0
-	public var strokeColor: UIColor = .black
+	public var lineColor: UIColor = .label
 	public var fillColor: UIColor = .black
 	public var shouldFill = false
 	public var circle: Circle = .zero {
@@ -23,17 +23,17 @@ public class CircleView: UIView {
 	/// circle-property.
 	/// - Parameter circle: The definition of the view's circle.
 	/// - Parameter lineWidth: The line width of the outer path of the circle.
-	/// - Parameter strokeColor: The color used for the outer path of the circle. The default value is `UIColor.label`.
+	/// - Parameter lineColor: The color used for the outer path of the circle. The default value is `UIColor.label`.
 	/// - Parameter fillColor: The color used to fill the circle. The default value is `UIColor.label`.
 	/// - Parameter filled: Defines whether the circle should be filled or not. The default value is `true`.
 	
-	public init(circle: Circle, lineWidth: CGFloat = 1, strokeColor: UIColor = .label, fillColor: UIColor = .label, filled: Bool = true) {
+	public init(circle: Circle, lineWidth: CGFloat = 1, lineColor: UIColor = .label, fillColor: UIColor = .label, filled: Bool = true) {
 		let frame = CGRect(x: circle.x, y: circle.y, width: circle.diameter, height: circle.diameter)
 		super.init(frame: frame)
 		setup()
 
 		self.lineWidth = lineWidth
-		self.strokeColor = strokeColor
+		self.lineColor = lineColor
 		self.fillColor = fillColor
 		self.shouldFill = filled
 		self.circle = circle
@@ -52,7 +52,7 @@ public class CircleView: UIView {
 		let inset = lineWidth/2
 		let rect = rect.insetBy(dx: inset, dy: inset)
 		let path = UIBezierPath(ovalIn: rect)
-		strokeColor.setStroke()
+		lineColor.setStroke()
 		fillColor.setFill()
 		path.lineWidth = lineWidth
 		path.stroke()
